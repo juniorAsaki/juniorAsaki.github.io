@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/* La barre de navigation */
+
+nav {
+    width: auto;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    background-image: linear-gradient(rgb(0, 0, 0), black);
+    z-index: 1;
+}
+
+nav .boutonNav button {
+    height: 50px;
+    width: 150px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+nav .menuContact button {
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+nav button:hover {
+    cursor: pointer;
+    background-color: beige;
+}
+
+
+/* Le header de la page */
+
+header {
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+}
+
+header .logoSlogan div,
+img {
+    width: 500px;
+    height: 500px;
+}
+
+header .fondateur div,
+img {
+    width: 500px;
+    height: 500px;
+}
+
+header .logoSlogan,
+.fondateur {
+    display: flex;
+    margin-bottom: 20px;
+    /* border: 1px solid; */
+    /*flex-wrap: wrap;*/
+}
+
+header .logoSlogan div {
+    height: 520px;
+    width: 700px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+header .fondateur div {
+    height: 520px;
+    width: 700px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.logoSlogan h1 {
+    font-size: 50px;
+}
+
+.logoSlogan strong {
+    font-size: 80px;
+    color: orange;
+}
+
+.fondateur h1 {
+    font-size: 40px;
+}
+
+.fondateur strong {
+    font-size: 70px;
+    color: orange;
+}
+
+.fondateur span {
+    font-size: 90px;
+}
+
+
+/* footer de la page*/
+
+footer {
+    border-top: 1px solid rgba(119, 116, 116, 0.582);
+    margin: 10rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+    padding: 15px;
+}
+
+footer .finPage,
+.iconsFont {
+    padding: 20px;
+}
+
+footer .iconsFont {
+    width: 1300px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+footer .finPage h1 {
+    font-size: 80px;
+    color: orange;
+}
+
+footer .finPage ul {
+    font-size: 30px;
+    position: relative;
+    left: 100px;
+    margin-top: 10px;
+}
+
+
+/* photo arslan*/
+
+.grid {
+    max-width: 1500px;
+    width: 80%;
+    height: auto;
+    margin: 10rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: center;
+    grid-gap: 20px
+}
+
+.grid .elementGrid {
+    width: 300px;
+    height: 450px;
+}
+
+
+/* formulaire de la page Contact*/
+
+.formulaireContact {
+    width: 900px;
+    margin: 10rem auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(orange, orange);
+    padding: 10px;
+}
+
+.formulaireContact input {
+    width: 380px;
+    padding: 15px;
+    border: none;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+.formulaireContact input[type="submit"] {
+    padding: 10px;
+    font-size: 35px;
+    font-weight: bolder;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    left: 90px;
+    margin-top: 1rem;
+}
+
+.formulaireContact input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: beige;
+}
+
+.formulaireContact textarea {
+    min-width: 380px;
+    max-width: 380px;
+    max-height: 232px;
+    min-height: 232px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    /* overflow: hidden; */
+}
+
+
+/* Les media query */
+
+@media screen and (max-width:680px) {
+    /* barre de navigation*/
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav .boutonNav,
+    .menuContact {
+        display: grid;
+        grid-column: 1;
+        /* border: 1px solid; */
+        padding: 10px;
+    }
+    nav .menuContact button {
+        height: 50px;
+        margin-bottom: 10px;
+        width: 150px;
+    }
+    nav .boutonNav button {
+        margin-bottom: 10px;
+    }
+    /*header de la page*/
+    header .logoSlogan {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header .fondateur {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header .logoSlogan div,
+    img {
+        width: 300px;
+        height: 300px;
+    }
+    header .fondateur div,
+    img {
+        width: 300px;
+        height: 300px;
+    }
+    .logoSlogan h1 {
+        font-size: 30px;
+    }
+    .logoSlogan strong {
+        font-size: 40px;
+        color: orange;
+    }
+    .fondateur h1 {
+        font-size: 20px;
+    }
+    .fondateur strong {
+        font-size: 30px;
+        color: orange;
+    }
+    .fondateur span {
+        font-size: 40px;
+    }
+    /* footer de la page*/
+    footer .finPage {
+        width: 300px;
+    }
+    footer .iconsFont {
+        width: 300px;
+    }
+    footer .finPage h1 {
+        font-size: 30px;
+    }
+    footer .finPage ul {
+        font-size: 20px;
+        left: -1px;
+        left: 20px;
+    }
+    /* formulaire de contact*/
+    .formulaireContact {
+        width: 300px;
+        padding: 10px;
+    }
+    .formulaireContact input {
+        width: 220px;
+    }
+    .formulaireContact input[type="submit"] {
+        padding: 5px;
+        font-size: 20px;
+        width: 150px;
+        left: 0;
+        left: 35px;
+    }
+    .formulaireContact textarea {
+        min-width: 220px;
+        max-width: 220px;
+        max-height: 220px;
+        min-height: 220px;
+        font-size: 15px;
+        /* overflow: hidden; */
+    }
+}
